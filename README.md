@@ -1,62 +1,135 @@
-# Astro Starter Kit: Blog
+# Rishav Paul - Professional Portfolio
 
-```sh
-npm create astro@latest -- --template blog
+A modern, SEO-optimized portfolio and blog built with Astro and Tailwind CSS, designed for discoverability by recruiters and AI agents.
+
+## 🚀 Live Site
+
+- **Production:** https://rishavpaul.dev
+- **Staging:** https://rishavpaul.github.io
+
+## 🎨 Design System
+
+Built with Tailwind CSS v4 featuring:
+- Modern, professional color palette (Blues, Cyans, Purples)
+- Responsive design (mobile-first)
+- Smooth animations and transitions
+- Accessibility-focused components
+- Sticky navigation with backdrop blur
+
+## 📄 Pages
+
+### Homepage (`/`)
+- Hero section with gradient text effect
+- Capabilities showcase (3-column grid)
+- Social links (GitHub, LinkedIn, Email)
+- Featured work CTA section
+
+### About (`/about`)
+- Professional background section
+- Areas of expertise breakdown
+- Technologies & tools grid
+- Personal interests
+
+### Projects (`/projects`)
+- Project showcase cards
+- Technology tags
+- Links to GitHub/demos/case studies
+- Open source contributions section
+
+### Resume (`/resume`)
+- Structured work experience timeline
+- Technical skills categorization
+- Education section
+- Downloadable PDF link (add your PDF to `/public/resume.pdf`)
+- JSON-LD structured data for machine reading
+
+### Blog (`/blog`)
+- Markdown-based blog posts
+- RSS feed auto-generated
+- SEO-optimized post pages
+
+## 🔍 SEO & Discoverability Features
+
+### For Search Engines
+- ✅ Semantic HTML throughout
+- ✅ Meta tags (title, description, keywords)
+- ✅ Open Graph tags for social sharing
+- ✅ Canonical URLs
+- ✅ Sitemap auto-generated
+- ✅ robots.txt configured
+- ✅ Fast page load (static site)
+
+### For AI Agents & Recruiters
+- ✅ JSON-LD structured data (Person schema)
+- ✅ Machine-readable resume data
+- ✅ Keywords in content for tech stack discovery
+- ✅ Clear semantic structure
+- ✅ Professional metadata
+
+## 🛠 Tech Stack
+
+- **Framework:** Astro 5.x
+- **Styling:** Tailwind CSS v4
+- **Hosting:** GitHub Pages
+- **Domain:** Cloudflare DNS
+- **Analytics:** (Add your preferred analytics)
+
+## 📝 Content Customization
+
+Replace placeholder content in:
+
+1. **`src/consts.ts`** - Update social links, job title, keywords
+2. **Homepage** - Fill in your intro, capabilities descriptions
+3. **About page** - Add your background, expertise, tech stack
+4. **Projects page** - Add your actual projects with links
+5. **Resume page** - Add work experience, education, skills
+6. **Blog posts** - Write technical articles in `/src/content/blog/`
+
+## 🚀 Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📦 Deployment
 
-Features:
+Automatic deployment via GitHub Actions to GitHub Pages on every push to `main`.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## 🎯 Next Steps
 
-## 🚀 Project Structure
+1. **Personalize content** - Replace all `[placeholder]` text
+2. **Add projects** - Showcase your best work
+3. **Write blog posts** - Share technical insights
+4. **Add resume PDF** - Place in `/public/resume.pdf`
+5. **Configure analytics** - Add Google Analytics or Plausible
+6. **Update social links** - Add your actual GitHub/LinkedIn URLs
+7. **Add testimonials** (optional) - Create a new section
+8. **Add case studies** (optional) - Deep dives into major projects
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📊 Analytics & Tracking
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+To add analytics:
+- Google Analytics: Add to `src/components/BaseHead.astro`
+- Plausible: Add script tag to BaseHead
+- Fathom: Follow Fathom setup docs
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🔗 Important Links
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Astro Docs: https://docs.astro.build
+- Tailwind Docs: https://tailwindcss.com/docs
+- GitHub Pages: https://pages.github.com
+- Schema.org (Structured Data): https://schema.org
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Built with Astro 🚀 | Styled with Tailwind CSS 💙
