@@ -21,11 +21,11 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 					<h1 class="mb-4">
 						Hi, I'm <span class="gradient-text">{SITE_AUTHOR}</span>
 					</h1>
-					<p class="text-2xl md:text-3xl text-slate-600 font-medium mb-6">
+					<p class="text-2xl md:text-3xl text-slate-400 font-medium mb-6">
 						{PROFESSIONAL_INFO.jobTitle}
 					</p>
 				</div>
-				<p class="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+				<p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
 					[Brief introduction about your background, expertise, and what you're passionate about building. Keep it concise and compelling - 2-3 sentences max.]
 				</p>
 				<div class="mt-10 flex flex-wrap gap-4 justify-center">
@@ -34,7 +34,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 							href={SOCIAL_LINKS.github}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors inline-flex items-center gap-2 font-medium"
+							class="px-6 py-3 bg-white text-slate-900 rounded-lg hover:bg-slate-200 transition-colors inline-flex items-center gap-2 font-medium"
 						>
 							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
@@ -59,7 +59,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 					{SOCIAL_LINKS.email && (
 						<a
 							href={`mailto:${SOCIAL_LINKS.email}`}
-							class="px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors inline-flex items-center gap-2 font-medium"
+							class="px-6 py-3 border-2 border-slate-600 text-slate-300 rounded-lg hover:border-slate-500 hover:bg-slate-800 transition-colors inline-flex items-center gap-2 font-medium"
 						>
 							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -74,43 +74,43 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 			<section class="mb-24">
 				<div class="text-center mb-12">
 					<h2 class="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
-					<p class="text-lg text-slate-600 max-w-2xl mx-auto">
+					<p class="text-lg text-slate-400 max-w-2xl mx-auto">
 						Backend-focused engineering leadership building AI infrastructure and scalable platforms
 					</p>
 				</div>
 				<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
-						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+					<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 card-hover">
+						<div class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+							<svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
 							</svg>
 						</div>
 						<h3 class="text-xl font-bold mb-3">Product Development</h3>
-						<p class="text-slate-600">
+						<p class="text-slate-400">
 							Leading backend engineering for customer-facing products. Architecting scalable systems, designing APIs, and shipping features that drive business impact.
 						</p>
 					</div>
 
-					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
-						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+					<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 card-hover">
+						<div class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+							<svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
 							</svg>
 						</div>
 						<h3 class="text-xl font-bold mb-3">AI Infrastructure & Agents</h3>
-						<p class="text-slate-600">
+						<p class="text-slate-400">
 							Building AI infrastructure with Model Context Protocol. Developing intelligent agents and creating evaluation frameworks to measure agent performance and reliability.
 						</p>
 					</div>
 
-					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
-						<div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+					<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 card-hover">
+						<div class="w-12 h-12 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
+							<svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
 							</svg>
 						</div>
 						<h3 class="text-xl font-bold mb-3">Platform Development</h3>
-						<p class="text-slate-600">
+						<p class="text-slate-400">
 							Designing and building platform services on AWS. Creating reusable infrastructure, APIs, and tools that empower engineering teams to ship faster.
 						</p>
 					</div>
@@ -121,13 +121,13 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 			<section class="mb-24">
 				<div class="text-center mb-12">
 					<h2 class="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
-					<p class="text-lg text-slate-600 max-w-2xl mx-auto">
+					<p class="text-lg text-slate-400 max-w-2xl mx-auto">
 						Technical leadership at leading tech companies
 					</p>
 				</div>
 				<div class="max-w-4xl mx-auto space-y-6">
 					<!-- HubSpot -->
-					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-orange-200 transition-colors">
+					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-orange-500/50 transition-colors">
 						<div class="flex items-start gap-4">
 							<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
 								<svg class="w-10 h-10 text-white" viewBox="0 0 512 512" fill="currentColor">
@@ -135,16 +135,16 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-xl font-bold text-slate-900">Technical Lead II</h3>
+								<h3 class="text-xl font-bold text-white">Technical Lead II</h3>
 								<p class="text-lg font-semibold" style="color: #ff7a59;">HubSpot</p>
-								<p class="text-slate-600 mt-2">Leading HubSpot's AI Connectors platform - building infrastructure for AI integrations and agent development</p>
+								<p class="text-slate-400 mt-2">Leading HubSpot's AI Connectors platform - building infrastructure for AI integrations and agent development</p>
 							</div>
-							<div class="text-sm text-emerald-600 font-semibold bg-emerald-50 px-3 py-1 rounded-full">Current</div>
+							<div class="text-sm text-emerald-400 font-semibold bg-emerald-900/30 px-3 py-1 rounded-full">Current</div>
 						</div>
 					</div>
 
 					<!-- Amazon - Alexa -->
-					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-200 transition-colors">
+					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-colors">
 						<div class="flex items-start gap-4">
 							<div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
 								<svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -152,43 +152,43 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-xl font-bold text-slate-900">Software Development Manager</h3>
-								<p class="text-lg font-semibold text-slate-700">Amazon - Alexa</p>
-								<p class="text-slate-600 mt-2">Led engineering teams building Alexa's voice AI platform</p>
+								<h3 class="text-xl font-bold text-white">Software Development Manager</h3>
+								<p class="text-lg font-semibold text-slate-300">Amazon - Alexa</p>
+								<p class="text-slate-400 mt-2">Led engineering teams building Alexa's voice AI platform</p>
 							</div>
 						</div>
 					</div>
 
 					<!-- AWS -->
-					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-orange-200 transition-colors">
+					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-orange-500/50 transition-colors">
 						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+							<div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
 								<svg class="w-10 h-10" viewBox="0 0 304 182" fill="none">
 									<path d="M86.4 66.4c0 3.7.4 6.7 1.1 8.9.8 2.2 1.8 4.6 3.2 7.2.5.8.7 1.6.7 2.3 0 1-.6 2-1.9 3l-6.3 4.2c-.9.6-1.8.9-2.6.9-1 0-2-.5-3-1.4-1.4-1.5-2.6-3.1-3.6-4.7-1-1.7-2-3.6-3.1-5.9-7.8 9.2-17.6 13.8-29.4 13.8-8.4 0-15.1-2.4-20-7.2s-7.4-11.2-7.4-19.2c0-8.5 3-15.4 9.1-20.6s14.2-7.8 24.5-7.8c3.4 0 6.9.3 10.6.8 3.7.5 7.5 1.3 11.5 2.2v-7.3c0-7.6-1.6-12.9-4.7-16-3.2-3.1-8.6-4.6-16.3-4.6-3.5 0-7.1.4-10.8 1.3-3.7.9-7.3 2-10.8 3.4-1.6.7-2.8 1.1-3.5 1.3-.7.2-1.2.3-1.6.3-1.4 0-2.1-1-2.1-3.1v-4.9c0-1.6.2-2.8.7-3.5.5-.7 1.4-1.4 2.8-2.1 3.5-1.8 7.7-3.3 12.6-4.5 4.9-1.3 10.1-1.9 15.6-1.9 11.9 0 20.6 2.7 26.2 8.1 5.5 5.4 8.3 13.6 8.3 24.6v32.4zm-40.6 15.2c3.3 0 6.7-.6 10.3-1.8 3.6-1.2 6.8-3.4 9.5-6.4 1.6-1.9 2.8-4 3.4-6.4.6-2.4 1-5.3 1-8.7v-4.2c-2.9-.7-6-1.3-9.2-1.7-3.2-.4-6.3-.6-9.4-.6-6.7 0-11.6 1.3-14.9 4-3.3 2.7-4.9 6.5-4.9 11.5 0 4.7 1.2 8.2 3.7 10.6 2.4 2.5 5.9 3.7 10.5 3.7zm80.3 10.8c-1.8 0-3-.3-3.8-1-.8-.6-1.5-2-2.1-3.9L96.7 10.2c-.6-2-.9-3.3-.9-4 0-1.6.8-2.5 2.4-2.5h9.8c1.9 0 3.2.3 3.9 1 .8.6 1.4 2 2 3.9l16.8 66.2 15.6-66.2c.5-2 1.1-3.3 1.9-3.9.8-.6 2.2-1 4-1h8c1.9 0 3.2.3 4 1 .8.6 1.5 2 1.9 3.9l15.8 67 17.3-67c.6-2 1.3-3.3 2-3.9.8-.6 2.1-1 3.9-1h9.3c1.6 0 2.5.8 2.5 2.5 0 .5-.1 1-.2 1.6-.1.6-.3 1.4-.7 2.5l-24.1 77.3c-.6 2-1.3 3.3-2.1 3.9-.8.6-2.1 1-3.8 1h-8.6c-1.9 0-3.2-.3-4-1-.8-.7-1.5-2-1.9-4L156 23l-15.4 64.4c-.5 2-1.1 3.3-1.9 4-.8.7-2.2 1-4 1h-8.6zm128.5 2.7c-5.2 0-10.4-.6-15.4-1.8-5-1.2-8.9-2.5-11.5-4-1.6-.9-2.7-1.9-3.1-2.8-.4-.9-.6-1.9-.6-2.8v-5.1c0-2.1.8-3.1 2.3-3.1.6 0 1.2.1 1.8.3.6.2 1.5.6 2.5 1 3.4 1.5 7.1 2.7 11 3.5 4 .8 7.9 1.2 11.9 1.2 6.3 0 11.2-1.1 14.6-3.3 3.4-2.2 5.2-5.4 5.2-9.5 0-2.8-.9-5.1-2.7-7-1.8-1.9-5.2-3.6-10.1-5.2L246 52c-7.3-2.3-12.7-5.7-16-10.2-3.3-4.4-5-9.3-5-14.5 0-4.2.9-7.9 2.7-11.1 1.8-3.2 4.2-6 7.2-8.2 3-2.3 6.4-4 10.4-5.2 4-1.2 8.2-1.7 12.6-1.7 2.2 0 4.5.1 6.7.4 2.3.3 4.4.7 6.5 1.1 2 .5 3.9 1 5.7 1.6 1.8.6 3.2 1.2 4.2 1.8 1.4.8 2.4 1.6 3 2.5.6.8.9 1.9.9 3.3v4.7c0 2.1-.8 3.2-2.3 3.2-.8 0-2.1-.4-3.8-1.2-5.7-2.6-12.1-3.9-19.2-3.9-5.7 0-10.2.9-13.3 2.8-3.1 1.9-4.7 4.8-4.7 8.9 0 2.8 1 5.2 3 7.1 2 1.9 5.7 3.8 11 5.5l14.2 4.5c7.2 2.3 12.4 5.5 15.5 9.6 3.1 4.1 4.6 8.8 4.6 14 0 4.3-.9 8.2-2.6 11.6-1.8 3.4-4.2 6.4-7.3 8.8-3.1 2.5-6.8 4.3-11.1 5.6-4.5 1.4-9.2 2.1-14.3 2.1z" fill="currentColor"/>
 									<path d="M273.5 143.7c-32.9 24.3-80.7 37.2-121.8 37.2-57.6 0-109.5-21.3-148.7-56.7-3.1-2.8-.3-6.6 3.4-4.4 42.4 24.6 94.7 39.5 148.8 39.5 36.5 0 76.6-7.6 113.5-23.2 5.5-2.5 10.2 3.6 4.8 7.6zm13.7-15.6c-4.2-5.4-27.8-2.6-38.5-1.3-3.2.4-3.7-2.4-.8-4.5 18.8-13.2 49.7-9.4 53.3-5 3.6 4.5-1 35.4-18.6 50.2-2.7 2.3-5.3 1.1-4.1-1.9 4-9.9 12.9-32.2 8.7-37.5z" fill="#F90"/>
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-xl font-bold text-slate-900">Sr. SDE</h3>
-								<p class="text-lg font-semibold text-slate-700">Amazon Web Services</p>
-								<p class="text-slate-600 mt-2">Senior engineer building AWS cloud services and infrastructure</p>
+								<h3 class="text-xl font-bold text-white">Sr. SDE</h3>
+								<p class="text-lg font-semibold text-slate-300">Amazon Web Services</p>
+								<p class="text-slate-400 mt-2">Senior engineer building AWS cloud services and infrastructure</p>
 							</div>
 						</div>
 					</div>
 
 					<!-- Amazon -->
-					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 transition-colors">
+					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-slate-600 transition-colors">
 						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+							<div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
 								<svg class="w-10 h-10" viewBox="0 0 603 182" fill="currentColor">
 									<path d="M374.9 141.1c-31.5 23.2-77.2 35.6-116.5 35.6-55.1 0-104.7-20.4-142.2-54.2-2.9-2.7-.3-6.3 3.2-4.2 40.5 23.6 90.6 37.8 142.4 37.8 34.9 0 73.3-7.2 108.6-22.2 5.3-2.4 9.7 3.5 4.5 7.2z" fill="#F90"/>
 									<path d="M387 127.6c-4-5.2-26.6-2.5-36.8-1.2-3.1.4-3.6-2.3-.8-4.3 18-12.7 47.6-9 51-4.8 3.4 4.3-1 33.9-17.8 48-2.6 2.2-5.1 1-3.9-1.8 3.8-9.5 12.3-30.8 8.3-35.9zM345.8 35.5v-7.3c0-1.1.8-1.8 1.8-1.8h32.8c1 0 1.8.8 1.8 1.8v6.3c0 1-.9 2.4-2.4 4.5l-17 24.3c6.3-.2 13 .8 18.7 3.9 1.3.7 1.6 1.7 1.7 2.7v7.8c0 1.1-1.2 2.3-2.4 1.7-10.2-5.4-23.8-6-35.1.1-1.1.6-2.3-.6-2.3-1.7v-7.4c0-1.1 0-3.1 1.2-4.8l19.7-28.3h-17.1c-1 0-1.8-.8-1.8-1.8zM124.1 75.8h-9.9c-.9-.1-1.7-.8-1.8-1.7V28.5c0-1 .8-1.8 1.9-1.8h9.2c1 .1 1.7.8 1.8 1.7v6.1h.2c2.4-6.1 7-8.8 13.1-8.8 6.2 0 10.1 2.7 12.9 8.8 2.4-6.1 7.9-8.8 13.8-8.8 4.2 0 8.8 1.7 11.6 5.6 3.1 4.2 2.5 10.4 2.5 15.8l-.1 27.6c0 1-.8 1.8-1.9 1.8h-9.9c-1-.1-1.7-.9-1.8-1.8V51.1c0-2.1.2-7.4-.3-9.4-.8-3.4-3.1-4.3-6.1-4.3-2.5 0-5.1 1.7-6.2 4.3-1.1 2.7-.9 7.1-.9 9.4v23.1c0 1-.8 1.8-1.9 1.8h-9.9c-1-.1-1.7-.9-1.8-1.8l-.1-23.6c0-5-.8-12.3-6.4-12.3-5.7 0-5.5 6.5-5.5 12.3v23.5c0 1-.8 1.8-1.9 1.8zm200.5-49.3c14.7 0 22.7 12.6 22.7 28.7 0 15.5-8.8 27.8-22.7 27.8-14.4 0-22.3-12.6-22.3-28.4 0-15.8 8-28.1 22.3-28.1zm.1 10.4c-7.3 0-7.7 9.9-7.7 16.1 0 6.2-.1 19.4 7.6 19.4 7.6 0 8-10.6 8-17 0-4.2-.2-9.4-1.2-13.5-1-3.5-2.9-4.9-6.2-4.9l-.5-.1zm40.7 38.9h-9.9c-1-.1-1.7-.9-1.8-1.8l-.1-45.6c.1-1 .9-1.7 1.9-1.7h9.2c.9.1 1.6.7 1.7 1.6v6.9h.2c2.6-6.5 6.3-9.6 12.7-9.6 4.2 0 8.3 1.5 10.9 5.6 2.4 3.8 2.4 10.2 2.4 14.8v28.1c-.1 1-.9 1.7-1.9 1.7h-10c-.9-.1-1.6-.8-1.7-1.7V51.1c0-4.9.6-12.1-5.5-12.1-2.1 0-4.1 1.4-5.1 3.6-1.2 2.7-1.4 5.4-1.4 8.4v23.3c-.1.9-.9 1.7-1.9 1.7l.2.1zm-155.8 0h-9.9c-1-.1-1.7-.9-1.8-1.8l-.1-45.6c.1-1 .9-1.7 1.9-1.7h9.2c.8.1 1.5.6 1.7 1.4v7.3h.2c2.7-6.5 6.5-9.8 13-9.8 4.3 0 8.5 1.6 11.2 5.8 2.5 3.9 2.5 10.5 2.5 15.2v27.5c-.1 1-.9 1.7-1.9 1.7h-10c-.9-.1-1.6-.8-1.7-1.6V51.3c0-5 .6-12.3-5.6-12.3-2.2 0-4.2 1.4-5.2 3.6-1.3 2.8-1.5 5.5-1.5 8.6v23.2c0 .9-.8 1.7-1.8 1.7l-.2-.1zm-48.6-.3c-1.4 1.2-3.4 1.3-5 .5-7-5.8-8.3-8.5-12.1-14-11.6 11.8-19.8 15.3-34.8 15.3-17.8 0-31.6-11-31.6-32.9 0-17.1 9.3-28.8 22.5-34.5 11.4-5 27.4-5.9 39.6-7.3V18c0-5.3.4-11.5-2.7-16-2.7-4-7.9-5.6-12.5-5.6-8.5 0-16.1 4.4-17.9 13.4-.4 2-1.9 4-3.9 4.1l-15.3-1.6c-1.8-.4-3.9-1.9-3.4-4.7 5.1-26.7 29.4-34.7 51.2-34.7 11.2 0 25.8 3 34.6 11.4 11.2 10.6 10.1 24.7 10.1 40.1v36.3c0 10.9 4.5 15.7 8.8 21.6 1.5 2.1 1.8 4.6-.1 6.1-4.8 4-13.3 11.4-18 15.6l-.1-.1.6-.7zm-25.2-61.1v-4.4c-13.9 0-28.6 3-28.6 19.1 0 8.2 4.3 13.7 11.7 13.7 5.4 0 10.2-3.3 13.3-8.7 3.6-6.6 3.3-12.7 3.3-19.7h.3z" fill="currentColor"/>
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-xl font-bold text-slate-900">Software Development Engineer</h3>
-								<p class="text-lg font-semibold text-slate-700">Amazon</p>
-								<p class="text-slate-600 mt-2">Backend engineering for Amazon's e-commerce platform</p>
+								<h3 class="text-xl font-bold text-white">Software Development Engineer</h3>
+								<p class="text-lg font-semibold text-slate-300">Amazon</p>
+								<p class="text-slate-400 mt-2">Backend engineering for Amazon's e-commerce platform</p>
 							</div>
 						</div>
 					</div>
@@ -196,14 +196,14 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 			</section>
 
 			<!-- Featured Projects Teaser -->
-			<section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-12 text-center">
+			<section class="bg-slate-900 rounded-2xl p-12 text-center">
 				<h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
-				<p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+				<p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
 					Explore my portfolio of projects showcasing technical depth, problem-solving, and impact
 				</p>
 				<a
 					href="/projects"
-					class="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors text-lg font-medium"
+					class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-lg hover:bg-slate-200 transition-colors text-lg font-medium"
 				>
 					View Projects
 					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
+/* Legacy color variables for blog compatibility */
+:root {
+  --black: 30, 41, 59;
+  --gray: 100, 116, 139;
+  --gray-dark: 241, 245, 249;
+  --accent: 59, 130, 246;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
 /* Modern design system with Tailwind v4 */
 @theme {
   --color-primary: #3b82f6;
   --color-primary-dark: #2563eb;
   --color-secondary: #8b5cf6;
   --color-accent: #06b6d4;
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-border: #e2e8f0;
 
   --font-sans: 'Inter var', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
-/* Custom fonts - you can replace with Google Fonts later */
+/* Custom fonts */
 @font-face {
   font-family: "Atkinson";
   src: url("/fonts/atkinson-regular.woff") format("woff");
@@ -33,19 +37,19 @@
   font-display: swap;
 }
 
-/* Base styles */
+/* Base styles - Dark mode only */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Atkinson", var(--font-sans);
-  @apply text-slate-900 bg-white antialiased;
+  @apply bg-slate-950 text-slate-100 antialiased;
 }
 
 /* Improved typography */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold text-slate-900 leading-tight;
+  @apply font-bold text-slate-100 leading-tight;
 }
 
 h1 {
@@ -61,16 +65,16 @@ h3 {
 }
 
 p {
-  @apply text-slate-700 leading-relaxed;
+  @apply text-slate-300 leading-relaxed;
 }
 
 a {
-  @apply text-blue-600 hover:text-blue-700 transition-colors;
+  @apply text-blue-400 hover:text-blue-300 transition-colors;
 }
 
 /* Code blocks */
 code {
-  @apply px-1.5 py-0.5 bg-slate-100 text-slate-800 rounded text-sm font-mono;
+  @apply px-1.5 py-0.5 bg-slate-800 text-slate-200 rounded text-sm font-mono;
 }
 
 pre {
@@ -94,7 +98,7 @@ pre code {
 
 /* Gradients and effects */
 .gradient-text {
-  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
 }
 
 .card-hover {

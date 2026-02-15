@@ -156,4 +156,55 @@ const description = `Learn more about ${SITE_AUTHOR} - ${PROFESSIONAL_INFO.jobTi
 		color: #666;
 		line-height: 1.6;
 	}
+
+	/* Dark mode styles */
+	@media (prefers-color-scheme: dark) {
+		.about h2 {
+			color: #f1f5f9;
+		}
+
+		.about h3 {
+			color: #e2e8f0;
+		}
+
+		.about p {
+			color: #cbd5e1;
+		}
+
+		.expertise-list strong {
+			color: #f1f5f9;
+		}
+
+		.tech-category {
+			background: #1e293b;
+		}
+
+		.tech-category p {
+			color: #94a3b8;
+		}
+	}
+
+	:global(.dark) .about h2 {
+		color: #f1f5f9;
+	}
+
+	:global(.dark) .about h3 {
+		color: #e2e8f0;
+	}
+
+	:global(.dark) .about p {
+		color: #cbd5e1;
+	}
+
+	:global(.dark) .expertise-list strong {
+		color: #f1f5f9;
+	}
+
+	:global(.dark) .tech-category {
+		background: #1e293b;
+	}
+
+	:global(.dark) .tech-category p {
+		color: #94a3b8;
+	}
 </style>
