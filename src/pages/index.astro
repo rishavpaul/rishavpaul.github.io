@@ -34,10 +34,10 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 							href={SOCIAL_LINKS.github}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors inline-flex items-center gap-2"
+							class="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors inline-flex items-center gap-2 font-medium"
 						>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"/>
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
 							</svg>
 							GitHub
 						</a>
@@ -47,10 +47,11 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 							href={SOCIAL_LINKS.linkedin}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
+							class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 font-medium"
 						>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+								<circle cx="4" cy="4" r="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 							LinkedIn
 						</a>
@@ -58,7 +59,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 					{SOCIAL_LINKS.email && (
 						<a
 							href={`mailto:${SOCIAL_LINKS.email}`}
-							class="px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors inline-flex items-center gap-2"
+							class="px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors inline-flex items-center gap-2 font-medium"
 						>
 							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -74,44 +75,120 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LI
 				<div class="text-center mb-12">
 					<h2 class="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
 					<p class="text-lg text-slate-600 max-w-2xl mx-auto">
-						Building scalable systems and leading technical initiatives
+						Backend-focused engineering leadership building AI infrastructure and scalable platforms
 					</p>
 				</div>
 				<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
 						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
 							</svg>
 						</div>
-						<h3 class="text-xl font-bold mb-3">System Design & Architecture</h3>
+						<h3 class="text-xl font-bold mb-3">Product Development</h3>
 						<p class="text-slate-600">
-							[Description of your experience with distributed systems, microservices, scalability patterns, and architectural decision-making]
-						</p>
-					</div>
-
-					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
-						<div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold mb-3">Full-Stack Development</h3>
-						<p class="text-slate-600">
-							[Description of your technical stack, frameworks you excel with, and end-to-end delivery capabilities]
+							Leading backend engineering for customer-facing products. Architecting scalable systems, designing APIs, and shipping features that drive business impact.
 						</p>
 					</div>
 
 					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
 						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
 							</svg>
 						</div>
-						<h3 class="text-xl font-bold mb-3">Technical Leadership</h3>
+						<h3 class="text-xl font-bold mb-3">AI Infrastructure & Agents</h3>
 						<p class="text-slate-600">
-							[Description of your experience leading teams, mentoring engineers, driving technical strategy, and cross-functional collaboration]
+							Building AI infrastructure with Model Context Protocol. Developing intelligent agents and creating evaluation frameworks to measure agent performance and reliability.
 						</p>
+					</div>
+
+					<div class="bg-white p-8 rounded-xl border border-slate-200 card-hover">
+						<div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
+							<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Platform Development</h3>
+						<p class="text-slate-600">
+							Designing and building platform services on AWS. Creating reusable infrastructure, APIs, and tools that empower engineering teams to ship faster.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience Section -->
+			<section class="mb-24">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
+					<p class="text-lg text-slate-600 max-w-2xl mx-auto">
+						Technical leadership at leading tech companies
+					</p>
+				</div>
+				<div class="max-w-4xl mx-auto space-y-6">
+					<!-- HubSpot -->
+					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+						<div class="flex items-start gap-4">
+							<div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M18.1 11.9l-4.9 4.9c-.4.4-1 .4-1.4 0l-4.9-4.9c-.4-.4-.4-1 0-1.4l4.9-4.9c.4-.4 1-.4 1.4 0l4.9 4.9c.4.4.4 1 0 1.4zm-7.8-5.6c-2 0-3.6 1.6-3.6 3.6s1.6 3.6 3.6 3.6 3.6-1.6 3.6-3.6-1.6-3.6-3.6-3.6z"/>
+								</svg>
+							</div>
+							<div class="flex-1">
+								<h3 class="text-xl font-bold text-slate-900">Technical Lead II</h3>
+								<p class="text-lg text-orange-600 font-medium">HubSpot</p>
+								<p class="text-slate-600 mt-2">Leading backend engineering for AI infrastructure and platform development</p>
+							</div>
+							<div class="text-sm text-slate-500 font-medium">Current</div>
+						</div>
+					</div>
+
+					<!-- Amazon - Alexa -->
+					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+						<div class="flex items-start gap-4">
+							<div class="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M13.5 17.5c-3.6 2.4-8.8 3.7-13.3 1.3-.2-.1-.2-.3 0-.4 4.2-3.6 11-3.9 15.6-.8.3.2.1.6-.3.8zm1.5.4c-.5-.6-3-1-5.8-.5-.3.1-.4-.2-.1-.4 2.5-1.7 6.6-1.4 7.1-.7.5.7-1.4 4.7-7.4 7.9-.3.2-.6 0-.4-.2 1.4-2 4.5-6.5 6.6-6.1z"/>
+								</svg>
+							</div>
+							<div class="flex-1">
+								<h3 class="text-xl font-bold text-slate-900">Software Development Manager</h3>
+								<p class="text-lg text-slate-700 font-medium">Amazon - Alexa</p>
+								<p class="text-slate-600 mt-2">Led engineering teams building Alexa's voice AI platform</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- AWS -->
+					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+						<div class="flex items-start gap-4">
+							<div class="w-16 h-16 bg-orange-400 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M6.76 10.8l-1.98.7c-.14.04-.23.16-.23.3v.84c0 .17.14.3.3.3h.08l1.83-.66v-1.48zm9.58 1.48l1.83.66h.08c.17 0 .3-.14.3-.3v-.84c0-.14-.09-.26-.23-.3l-1.98-.7v1.48zM12 14.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-6.8c-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8 4.8-2.15 4.8-4.8-2.15-4.8-4.8-4.8z"/>
+								</svg>
+							</div>
+							<div class="flex-1">
+								<h3 class="text-xl font-bold text-slate-900">Sr. SDE</h3>
+								<p class="text-lg text-slate-700 font-medium">Amazon Web Services</p>
+								<p class="text-slate-600 mt-2">Senior engineer building AWS cloud services and infrastructure</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Amazon -->
+					<div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+						<div class="flex items-start gap-4">
+							<div class="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M13.5 17.5c-3.6 2.4-8.8 3.7-13.3 1.3-.2-.1-.2-.3 0-.4 4.2-3.6 11-3.9 15.6-.8.3.2.1.6-.3.8zm1.5.4c-.5-.6-3-1-5.8-.5-.3.1-.4-.2-.1-.4 2.5-1.7 6.6-1.4 7.1-.7.5.7-1.4 4.7-7.4 7.9-.3.2-.6 0-.4-.2 1.4-2 4.5-6.5 6.6-6.1z"/>
+								</svg>
+							</div>
+							<div class="flex-1">
+								<h3 class="text-xl font-bold text-slate-900">Software Development Engineer</h3>
+								<p class="text-lg text-slate-700 font-medium">Amazon</p>
+								<p class="text-slate-600 mt-2">Backend engineering for Amazon's e-commerce platform</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
