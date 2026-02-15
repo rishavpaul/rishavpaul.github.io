@@ -1,0 +1,58 @@
+---
+import { SITE_AUTHOR, SITE_URL, SITE_DESCRIPTION, PROFESSIONAL_INFO, SOCIAL_LINKS } from '../consts';
+
+interface Props {
+	type?: 'person' | 'website' | 'article';
+	title?: string;
+	description?: string;
+	publishedDate?: Date;
+	modifiedDate?: Date;
+}
+
+const {
+	type = 'person',
+	title,
+	description = SITE_DESCRIPTION,
+	publishedDate,
+	modifiedDate
+} = Astro.props;
+
+const structuredData = type === 'person' ? {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: SITE_AUTHOR,
+	url: SITE_URL,
+	jobTitle: PROFESSIONAL_INFO.jobTitle,
+	description: SITE_DESCRIPTION,
+	sameAs: [
+		SOCIAL_LINKS.github,
+		SOCIAL_LINKS.linkedin,
+		SOCIAL_LINKS.twitter,
+	].filter(Boolean),
+	knowsAbout: PROFESSIONAL_INFO.keywords,
+} : type === 'website' ? {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: SITE_AUTHOR,
+	url: SITE_URL,
+	description: SITE_DESCRIPTION,
+	author: {
+		'@type': 'Person',
+		name: SITE_AUTHOR,
+	},
+} : {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: title,
+	description: description,
+	author: {
+		'@type': 'Person',
+		name: SITE_AUTHOR,
+		url: SITE_URL,
+	},
+	datePublished: publishedDate?.toISOString(),
+	dateModified: modifiedDate?.toISOString() || publishedDate?.toISOString(),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
