@@ -1,0 +1,19 @@
+---
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const gitHubEditUrl = `https://github.com/rishavpaul/rishavpaul.github.io/blob/main/src/content/blog/${slug}.md`;
+---
+
+<div class="my-8 p-4 border-l-4 border-blue-500 bg-slate-800/50 rounded">
+  <h3 class="font-bold mb-2 text-slate-200">Steal This Post</h3>
+  <p class="text-sm text-slate-400 mb-3">
+    This content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" class="text-blue-400 hover:underline">Creative Commons BY 4.0</a>. You can reuse and remix this post freely.
+  </p>
+  <a href={gitHubEditUrl} target="_blank" rel="noopener"
+     class="text-blue-400 hover:underline text-sm inline-flex items-center gap-1">
+    Edit on GitHub
+  </a>
+</div>

@@ -1,0 +1,18 @@
+---
+// KeyboardNav.astro - J/K keys for navigating between posts
+---
+<script>
+  document.addEventListener('keydown', (e) => {
+    // Ignore if user is typing in an input
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+
+    if (e.key === 'j' || e.key === 'J') {
+      const nextLink = document.querySelector('a[data-nav="next"]') as HTMLAnchorElement;
+      if (nextLink) nextLink.click();
+    }
+    if (e.key === 'k' || e.key === 'K') {
+      const prevLink = document.querySelector('a[data-nav="prev"]') as HTMLAnchorElement;
+      if (prevLink) prevLink.click();
+    }
+  });
+</script>

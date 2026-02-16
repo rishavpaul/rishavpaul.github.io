@@ -1,0 +1,46 @@
+---
+export interface Props {
+  prevUrl?: string;
+  prevTitle?: string;
+  nextUrl?: string;
+  nextTitle?: string;
+}
+
+const { prevUrl, prevTitle, nextUrl, nextTitle } = Astro.props;
+---
+
+{/* Previous/Next Post Navigation */}
+<div class="mt-12 flex justify-between">
+  {prevUrl && (
+    <a href={prevUrl} data-nav="prev"
+       class="text-blue-400 hover:underline">
+      ← Previous: {prevTitle}
+    </a>
+  )}
+  {nextUrl && (
+    <a href={nextUrl} data-nav="next"
+       class="text-blue-400 hover:underline ml-auto">
+      Next: {nextTitle} →
+    </a>
+  )}
+</div>
+
+{/* Keyboard Navigation Script */}
+<script>
+  document.addEventListener('keydown', (e) => {
+    // Ignore if user is typing in an input
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+      return;
+    }
+
+    // j = next post, k = previous post
+    if (e.key === 'j' || e.key === 'J') {
+      const nextLink = document.querySelector('a[data-nav="next"]') as HTMLAnchorElement;
+      if (nextLink) nextLink.click();
+    }
+    if (e.key === 'k' || e.key === 'K') {
+      const prevLink = document.querySelector('a[data-nav="prev"]') as HTMLAnchorElement;
+      if (prevLink) prevLink.click();
+    }
+  });
+</script>

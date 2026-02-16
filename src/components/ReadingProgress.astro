@@ -1,0 +1,19 @@
+---
+// ReadingProgress.astro - Shows reading progress bar at top of page
+---
+<div id="progress-bar"
+     class="fixed top-0 left-0 h-1 bg-blue-500 transition-all duration-150 z-50"
+     style="width: 0%">
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+      progressBar.style.width = scrolled + '%';
+    }
+  });
+</script>

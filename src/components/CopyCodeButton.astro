@@ -1,0 +1,31 @@
+---
+// CopyCodeButton.astro - Adds copy buttons to code blocks
+---
+<script>
+  document.querySelectorAll('pre').forEach((block) => {
+    // Check if button already exists
+    if (block.parentElement?.querySelector('.copy-button')) return;
+
+    const button = document.createElement('button');
+    button.textContent = 'Copy';
+    button.className = 'copy-button absolute top-2 right-2 px-3 py-1 bg-slate-700 hover:bg-slate-600 text-slate-300 text-xs rounded transition opacity-0 group-hover:opacity-100';
+
+    const container = document.createElement('div');
+    container.className = 'relative group';
+    block.parentNode?.insertBefore(container, block);
+    container.appendChild(block);
+    container.appendChild(button);
+
+    button.addEventListener('click', async () => {
+      const code = block.textContent || '';
+      await navigator.clipboard.writeText(code);
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.classList.add('text-green-400');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('text-green-400');
+      }, 2000);
+    });
+  });
+</script>
