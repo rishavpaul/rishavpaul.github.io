@@ -14,117 +14,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			/* Medium-inspired typography */
-			.article-content {
-				font-family: 'Georgia', 'Times New Roman', serif;
-				line-height: 1.8;
-				font-size: 1.125rem;
-				color: #d1d5db;
-			}
-
-			.article-content h1,
-			.article-content h2,
-			.article-content h3 {
-				font-family: ui-sans-serif, system-ui, sans-serif;
-				font-weight: 600;
-				color: #f3f4f6;
-				margin-top: 2em;
-				margin-bottom: 0.5em;
-				line-height: 1.3;
-			}
-
-			.article-content h1 { font-size: 2rem; }
-			.article-content h2 { font-size: 1.5rem; }
-			.article-content h3 { font-size: 1.25rem; }
-
-			.article-content p {
-				margin-bottom: 2em;
-			}
-
-			.article-content strong {
-				display: block;
-				margin-top: 2em;
-				margin-bottom: 0.5em;
-				color: #f3f4f6;
-				font-weight: 600;
-			}
-
-			.article-content strong:first-child {
-				margin-top: 0;
-			}
-
-			.article-content a {
-				color: #60a5fa;
-				text-decoration: underline;
-				text-decoration-color: #3b82f6;
-				text-underline-offset: 2px;
-			}
-
-			.article-content a:hover {
-				color: #93c5fd;
-			}
-
-			.article-content ul,
-			.article-content ol {
-				margin-bottom: 2em;
-				padding-left: 1.5em;
-				color: #d1d5db;
-			}
-
-			.article-content ul {
-				list-style-type: disc;
-			}
-
-			.article-content ol {
-				list-style-type: decimal;
-			}
-
-			.article-content li {
-				margin-bottom: 0.75em;
-				padding-left: 0.5em;
-			}
-
-			.article-content blockquote {
-				border-left: 3px solid #3b82f6;
-				padding-left: 1em;
-				margin: 1.5em 0;
-				font-style: italic;
-				color: #9ca3af;
-			}
-
-			.article-content code {
-				font-family: 'JetBrains Mono', monospace;
-				font-size: 0.875em;
-				background: #1f2937;
-				padding: 0.2em 0.4em;
-				border-radius: 4px;
-			}
-
-			.article-content pre {
-				background: #1f2937;
-				padding: 1em;
-				border-radius: 8px;
-				overflow-x: auto;
-				margin-bottom: 1.5em;
-			}
-
-			.article-content pre code {
-				background: transparent;
-				padding: 0;
-			}
-
-			.article-content img {
-				border-radius: 8px;
-				margin: 2em 0;
-			}
-
-			.article-content hr {
-				border: none;
-				border-top: 1px solid #374151;
-				margin: 2em 0;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -164,7 +53,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				)}
 
 				<!-- Content -->
-				<div class="article-content">
+				<div class="prose prose-invert prose-lg prose-slate max-w-none prose-headings:font-sans prose-headings:text-slate-100 prose-a:text-blue-400 prose-a:underline hover:prose-a:text-blue-300 prose-strong:text-slate-100 prose-code:text-slate-300 prose-code:bg-slate-800 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-slate-900 prose-blockquote:border-blue-500 prose-img:rounded-lg prose-hr:border-slate-700">
 					<slot />
 				</div>
 			</article>
