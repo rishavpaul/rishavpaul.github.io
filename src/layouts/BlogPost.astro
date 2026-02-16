@@ -39,7 +39,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.article-content h3 { font-size: 1.25rem; }
 
 			.article-content p {
-				margin-bottom: 1.5em;
+				margin-bottom: 2em;
+			}
+
+			.article-content strong {
+				display: block;
+				margin-top: 2em;
+				margin-bottom: 0.5em;
+				color: #f3f4f6;
+				font-weight: 600;
+			}
+
+			.article-content strong:first-child {
+				margin-top: 0;
 			}
 
 			.article-content a {
@@ -55,12 +67,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 			.article-content ul,
 			.article-content ol {
-				margin-bottom: 1.5em;
+				margin-bottom: 2em;
 				padding-left: 1.5em;
+				color: #d1d5db;
+			}
+
+			.article-content ul {
+				list-style-type: disc;
+			}
+
+			.article-content ol {
+				list-style-type: decimal;
 			}
 
 			.article-content li {
-				margin-bottom: 0.5em;
+				margin-bottom: 0.75em;
+				padding-left: 0.5em;
 			}
 
 			.article-content blockquote {
@@ -101,11 +123,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				border: none;
 				border-top: 1px solid #374151;
 				margin: 2em 0;
-			}
-
-			.article-content strong {
-				color: #f3f4f6;
-				font-weight: 600;
 			}
 		</style>
 	</head>
