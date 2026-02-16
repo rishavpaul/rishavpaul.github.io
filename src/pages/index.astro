@@ -4,9 +4,6 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import StructuredData from '../components/StructuredData.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, PROFESSIONAL_INFO, SOCIAL_LINKS } from '../consts';
-import { Image } from 'astro:assets';
-import alexaLogo from '../assets/alexa-logo.png';
-import amazonLogo from '../assets/amazon-logo.png';
 ---
 
 <!doctype html>
@@ -19,30 +16,21 @@ import amazonLogo from '../assets/amazon-logo.png';
 		<Header />
 		<main class="container-custom py-16 md:py-24">
 			<!-- Hero Section -->
-			<section class="max-w-4xl mx-auto text-center mb-24">
-				<div class="mb-6">
-					<h1 class="mb-4">
-						Hi, I'm <span class="gradient-text">{SITE_AUTHOR}</span>
-					</h1>
-					<p class="text-2xl md:text-3xl text-slate-400 font-medium mb-6">
-						{PROFESSIONAL_INFO.jobTitle}
-					</p>
-				</div>
-				<p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-					[Brief introduction about your background, expertise, and what you're passionate about building. Keep it concise and compelling - 2-3 sentences max.]
+			<section class="max-w-3xl mx-auto mb-24">
+				<h1 class="mb-6">{SITE_AUTHOR}</h1>
+				<p class="text-xl text-slate-300 mb-8 leading-relaxed">
+					I build backend systems that scale to billions of requests.
+					Currently leading platform infrastructure at HubSpot.
 				</p>
-				<div class="mt-10 flex flex-wrap gap-4 justify-center">
+				<div class="flex flex-wrap gap-4">
 					{SOCIAL_LINKS.github && (
 						<a
 							href={SOCIAL_LINKS.github}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-6 py-3 bg-white text-slate-900 rounded-lg hover:bg-slate-200 transition-colors inline-flex items-center gap-2 font-medium"
+							class="px-5 py-2.5 border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-md text-sm font-medium"
 						>
-							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-							</svg>
-							<span>GitHub</span>
+							GitHub
 						</a>
 					)}
 					{SOCIAL_LINKS.linkedin && (
@@ -50,161 +38,82 @@ import amazonLogo from '../assets/amazon-logo.png';
 							href={SOCIAL_LINKS.linkedin}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 font-medium"
+							class="px-5 py-2.5 border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-md text-sm font-medium"
 						>
-							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-								<circle cx="4" cy="4" r="2" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-							<span>LinkedIn</span>
+							LinkedIn
 						</a>
 					)}
 					{SOCIAL_LINKS.email && (
 						<a
 							href={`mailto:${SOCIAL_LINKS.email}`}
-							class="px-6 py-3 border-2 border-slate-600 text-slate-300 rounded-lg hover:border-slate-500 hover:bg-slate-800 transition-colors inline-flex items-center gap-2 font-medium"
+							class="px-5 py-2.5 border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-md text-sm font-medium"
 						>
-							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-							</svg>
-							<span>Email</span>
+							Email
 						</a>
 					)}
 				</div>
 			</section>
 
-			<!-- What I Do Section -->
-			<section class="mb-24">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
-					<p class="text-lg text-slate-400 max-w-2xl mx-auto">
-						Backend-focused engineering leadership building AI infrastructure and scalable platforms
-					</p>
-				</div>
-				<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-					<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 card-hover">
-						<div class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold mb-3">Product Development</h3>
-						<p class="text-slate-400">
-							Leading backend engineering for customer-facing products. Architecting scalable systems, designing APIs, and shipping features that drive business impact.
-						</p>
-					</div>
-
-					<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 card-hover">
-						<div class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold mb-3">AI Infrastructure & Agents</h3>
-						<p class="text-slate-400">
-							Building AI infrastructure with Model Context Protocol. Developing intelligent agents and creating evaluation frameworks to measure agent performance and reliability.
-						</p>
-					</div>
-
-					<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 card-hover">
-						<div class="w-12 h-12 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold mb-3">Platform Development</h3>
-						<p class="text-slate-400">
-							Designing and building platform services on AWS. Creating reusable infrastructure, APIs, and tools that empower engineering teams to ship faster.
-						</p>
-					</div>
-				</div>
-			</section>
-
 			<!-- Experience Section -->
 			<section class="mb-24">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
-					<p class="text-lg text-slate-400 max-w-2xl mx-auto">
-						Technical leadership at leading tech companies
-					</p>
-				</div>
-				<div class="max-w-4xl mx-auto space-y-6">
+				<h2 class="mb-10">Experience</h2>
+				<div class="max-w-3xl mx-auto space-y-6">
 					<!-- HubSpot -->
-					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-orange-500/50 transition-colors">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-								<svg class="w-10 h-10 text-white" viewBox="0 0 512 512" fill="currentColor">
-									<path d="M267.4 211.6c-25.1 23.7-40.8 57.3-40.8 94.6 0 29.3 9.7 56.3 26 78L203.1 434c-4.4-1.6-9.1-2.5-14-2.5-10.8 0-20.9 4.2-28.5 11.8-7.6 7.6-11.8 17.8-11.8 28.6s4.2 20.9 11.8 28.5c7.8 7.8 18.1 11.7 28.5 11.7 10.4 0 20.7-3.9 28.5-11.7 7.6-7.6 11.8-17.8 11.8-28.5 0-4.2-.6-8.2-1.9-12.1l50-50.2c22 16.9 49.4 26.9 79.3 26.9 71.9 0 130-58.3 130-130.2 0-65.2-47.7-119.2-110.2-128.7V116c17.5-7.4 28.2-23.8 28.2-42.9 0-26.1-20.9-47.9-47-47.9S311.2 47 311.2 73.1c0 19.1 10.7 35.5 28.2 42.9v61.2c-15.2 2.1-29.6 6.7-42.7 13.6-27.6-20.9-117.5-85.7-168.9-124.8 1.2-4.4 2-9 2-13.8C129.8 23.4 106.3 0 77.4 0 48.6 0 25.2 23.4 25.2 52.2c0 28.9 23.4 52.3 52.2 52.3 9.8 0 18.9-2.9 26.8-7.6l163.2 114.7zm89.5 163.6c-38.1 0-69-30.9-69-69s30.9-69 69-69 69 30.9 69 69-30.9 69-69 69z"/>
-								</svg>
+					<div class="card card-hover">
+						<div class="flex items-start justify-between gap-4 mb-3">
+							<div>
+								<h3 class="text-lg font-semibold text-white">Technical Lead II</h3>
+								<p class="text-slate-400">HubSpot</p>
 							</div>
-							<div class="flex-1">
-								<h3 class="text-xl font-bold text-white">Technical Lead II</h3>
-								<p class="text-lg font-semibold" style="color: #ff7a59;">HubSpot</p>
-								<p class="text-slate-400 mt-2">Leading HubSpot's AI Connectors platform - building infrastructure for AI integrations and agent development</p>
-							</div>
-							<div class="text-sm text-emerald-400 font-semibold bg-emerald-900/30 px-3 py-1 rounded-full">Current</div>
+							<span class="text-sm text-emerald-400 font-medium">Current</span>
 						</div>
+						<p class="text-slate-400 text-sm leading-relaxed">
+							Leading HubSpot's AI Connectors platform - building infrastructure for AI integrations and agent development.
+						</p>
 					</div>
 
 					<!-- Amazon - Alexa -->
-					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-colors">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm bg-white p-2">
-								<Image src={alexaLogo} alt="Alexa" class="w-12 h-12 object-contain" />
-							</div>
-							<div class="flex-1">
-								<h3 class="text-xl font-bold text-white">Software Development Manager</h3>
-								<p class="text-lg font-semibold text-slate-300">Amazon - Alexa</p>
-								<p class="text-slate-400 mt-2">Led engineering teams building Alexa's voice AI platform</p>
-							</div>
+					<div class="card card-hover">
+						<div class="mb-3">
+							<h3 class="text-lg font-semibold text-white">Software Development Manager</h3>
+							<p class="text-slate-400">Amazon &ndash; Alexa</p>
 						</div>
+						<p class="text-slate-400 text-sm leading-relaxed">
+							Led engineering teams building Alexa's voice AI platform.
+						</p>
 					</div>
 
 					<!-- AWS -->
-					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-orange-500/50 transition-colors">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm bg-white p-2">
-								<Image src={amazonLogo} alt="AWS" class="w-12 h-12 object-contain" />
-							</div>
-							<div class="flex-1">
-								<h3 class="text-xl font-bold text-white">Sr. SDE</h3>
-								<p class="text-lg font-semibold text-slate-300">Amazon Web Services</p>
-								<p class="text-slate-400 mt-2">Senior engineer building AWS cloud services and infrastructure</p>
-							</div>
+					<div class="card card-hover">
+						<div class="mb-3">
+							<h3 class="text-lg font-semibold text-white">Sr. Software Development Engineer</h3>
+							<p class="text-slate-400">Amazon Web Services</p>
 						</div>
+						<p class="text-slate-400 text-sm leading-relaxed">
+							Senior engineer building AWS cloud services and infrastructure.
+						</p>
 					</div>
 
-					<!-- Amazon -->
-					<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-slate-600 transition-colors">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm bg-white p-2">
-								<Image src={amazonLogo} alt="Amazon" class="w-12 h-12 object-contain" />
-							</div>
-							<div class="flex-1">
-								<h3 class="text-xl font-bold text-white">Software Development Engineer</h3>
-								<p class="text-lg font-semibold text-slate-300">Amazon</p>
-								<p class="text-slate-400 mt-2">Backend engineering for Amazon's e-commerce platform</p>
-							</div>
+					<!-- Amazon Retail -->
+					<div class="card card-hover">
+						<div class="mb-3">
+							<h3 class="text-lg font-semibold text-white">Software Development Engineer</h3>
+							<p class="text-slate-400">Amazon</p>
 						</div>
+						<p class="text-slate-400 text-sm leading-relaxed">
+							Backend engineering for Amazon's e-commerce platform.
+						</p>
 					</div>
 				</div>
 			</section>
 
-			<!-- Featured Projects Teaser -->
-			<section class="bg-slate-900 rounded-2xl p-12 text-center">
-				<h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
-				<p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
-					Explore my portfolio of projects showcasing technical depth, problem-solving, and impact
-				</p>
-				<a
-					href="/projects"
-					class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-lg hover:bg-slate-200 transition-colors text-lg font-medium"
-				>
-					View Projects
-					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-					</svg>
-				</a>
+			<!-- Links -->
+			<section class="border-t border-slate-800 pt-12">
+				<div class="flex flex-wrap gap-8 text-sm">
+					<a href="/projects" class="text-slate-400 hover:text-white transition-colors">Projects</a>
+					<a href="/resume" class="text-slate-400 hover:text-white transition-colors">Resume</a>
+					<a href="/blog" class="text-slate-400 hover:text-white transition-colors">Blog</a>
+				</div>
 			</section>
 		</main>
 		<Footer />
