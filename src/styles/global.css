@@ -63,7 +63,7 @@ h3 {
 }
 
 p {
-  @apply text-slate-400 leading-relaxed;
+  @apply text-slate-300 leading-relaxed;
 }
 
 a {
