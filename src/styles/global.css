@@ -40,7 +40,9 @@ html {
 
 body {
   font-family: "Atkinson", var(--font-sans);
-  @apply bg-slate-950 text-slate-200 antialiased;
+  background-color: #212737;
+  color: #e2e8f0;
+  @apply antialiased;
 }
 
 /* Improved typography */
