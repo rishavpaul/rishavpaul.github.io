@@ -67,7 +67,11 @@ p {
 }
 
 a {
-  @apply text-slate-300 hover:text-white transition-colors;
+  @apply text-slate-300 hover:text-white transition-colors duration-200;
+}
+
+a:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-slate-900 rounded;
 }
 
 /* Code blocks */
@@ -94,11 +98,58 @@ pre code {
   @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Simple card style */
+/* Card styles with enhanced hover effects */
 .card {
-  @apply border border-slate-800 p-6 rounded-lg;
+  @apply border border-slate-800 p-6 rounded-lg transition-all duration-200;
 }
 
 .card-hover {
-  @apply transition-colors duration-200 hover:border-slate-700;
+  @apply hover:border-slate-700 hover:shadow-lg hover:-translate-y-0.5;
+}
+
+.card-hover:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+/* Button focus styles */
+button:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-slate-900 rounded;
+}
+
+/* Link animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-in-out;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors;
+}
+
+*:not(pre, code, svg) {
+  @apply duration-200;
 }

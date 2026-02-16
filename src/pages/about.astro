@@ -17,8 +17,8 @@ const description = `Learn more about ${SITE_AUTHOR} - ${PROFESSIONAL_INFO.jobTi
 	</head>
 	<body>
 		<Header />
-		<main>
-			<article class="about">
+		<main id="main-content" class="container-custom py-16 md:py-24">
+			<article class="about max-w-3xl mx-auto">
 				<h1>{title}</h1>
 
 				<section class="bio">
@@ -88,123 +88,92 @@ const description = `Learn more about ${SITE_AUTHOR} - ${PROFESSIONAL_INFO.jobTi
 
 <style>
 	.about {
-		max-width: 800px;
-		margin: 0 auto;
+		width: 100%;
 	}
 
 	.about h1 {
-		font-size: 2.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 
 	.about section {
-		margin: 3rem 0;
+		margin-bottom: 3rem;
 	}
 
 	.about h2 {
-		font-size: 1.75rem;
-		margin-bottom: 1.25rem;
-		color: #333;
+		color: #e2e8f0;
+		margin-bottom: 1.5rem;
 	}
 
 	.about h3 {
-		font-size: 1.25rem;
-		margin-bottom: 0.75rem;
-		color: #444;
+		color: #e2e8f0;
+		margin-bottom: 1rem;
 	}
 
 	.about p {
-		line-height: 1.7;
+		color: #cbd5e1;
+		line-height: 1.625;
 		margin-bottom: 1rem;
-		color: #555;
 	}
 
 	.expertise-list {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 	}
 
 	.expertise-list li {
-		margin-bottom: 1.25rem;
-		line-height: 1.6;
+		line-height: 1.625;
+		color: #cbd5e1;
+		margin-bottom: 1rem;
 	}
 
 	.expertise-list strong {
-		color: #333;
+		color: #e2e8f0;
 		display: block;
 		margin-bottom: 0.25rem;
 	}
 
 	.tech-grid {
 		display: grid;
-		gap: 2rem;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		grid-template-columns: 1fr;
 		margin-top: 1.5rem;
 	}
 
+	@media (min-width: 768px) {
+		.tech-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.tech-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
 	.tech-category {
-		padding: 1.5rem;
-		background: #f9f9f9;
-		border-radius: 8px;
+		padding: 1rem;
+		background-color: #1e293b;
+		border: 1px solid #475569;
+		border-radius: 0.5rem;
+		transition: border-color 0.2s ease, transform 0.2s ease;
+	}
+
+	.tech-category:hover {
+		border-color: #334155;
 	}
 
 	.tech-category h3 {
+		color: #e2e8f0;
 		margin-bottom: 0.75rem;
+		font-size: 1rem;
+		font-weight: 600;
 	}
 
 	.tech-category p {
-		color: #666;
-		line-height: 1.6;
-	}
-
-	/* Dark mode styles */
-	@media (prefers-color-scheme: dark) {
-		.about h2 {
-			color: #f1f5f9;
-		}
-
-		.about h3 {
-			color: #e2e8f0;
-		}
-
-		.about p {
-			color: #cbd5e1;
-		}
-
-		.expertise-list strong {
-			color: #f1f5f9;
-		}
-
-		.tech-category {
-			background: #1e293b;
-		}
-
-		.tech-category p {
-			color: #94a3b8;
-		}
-	}
-
-	:global(.dark) .about h2 {
-		color: #f1f5f9;
-	}
-
-	:global(.dark) .about h3 {
-		color: #e2e8f0;
-	}
-
-	:global(.dark) .about p {
 		color: #cbd5e1;
-	}
-
-	:global(.dark) .expertise-list strong {
-		color: #f1f5f9;
-	}
-
-	:global(.dark) .tech-category {
-		background: #1e293b;
-	}
-
-	:global(.dark) .tech-category p {
-		color: #94a3b8;
+		font-size: 0.875rem;
+		line-height: 1.625;
 	}
 </style>

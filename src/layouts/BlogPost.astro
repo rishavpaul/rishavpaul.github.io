@@ -11,10 +11,14 @@ import CopyCodeButton from '../components/CopyCodeButton.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import KeyboardNav from '../components/KeyboardNav.astro';
 import ContentLicense from '../components/ContentLicense.astro';
+import ReadingTime from '../components/ReadingTime.astro';
+import TagList from '../components/TagList.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import { calculateReadingTime } from '../utils/reading-time';
 
-type Props = CollectionEntry<'blog'>['data'] & { slug?: string };
+type Props = CollectionEntry<'blog'>['data'] & { slug?: string; headings?: Array<{ depth: number; slug: string; text: string }> };
 
-const { title, description, pubDate, updatedDate, heroImage, slug } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, slug, tags, headings } = Astro.props;
 
 // Get adjacent posts for navigation
 const allPosts = (await getCollection('blog'))
@@ -35,32 +39,46 @@ const pageUrl = Astro.url.href;
 	<body>
 		<ReadingProgress />
 		<Header />
-		<main class="py-12 md:py-20">
-			<article class="max-w-2xl mx-auto px-4 sm:px-6">
-				<!-- Header -->
-				<header class="mb-12">
-					<div class="mb-4">
-						<a href="/blog" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">
-							← Back to all posts
-						</a>
-					</div>
-					<time class="text-sm text-slate-400 font-medium">
-						<FormattedDate date={pubDate} />
-					</time>
-					<h1 class="text-3xl md:text-4xl font-bold text-slate-200 mt-3 mb-6 leading-tight">
-						{title}
-					</h1>
-					{description && (
-						<p class="text-xl text-slate-400 leading-relaxed">
-							{description}
-						</p>
-					)}
-					{updatedDate && (
-						<p class="text-sm text-slate-500 mt-3 italic">
-							Last updated on <FormattedDate date={updatedDate} />
-						</p>
-					)}
-				</header>
+		<main id="main-content" class="py-12 md:py-20">
+			<div class="container-custom grid grid-cols-1 lg:grid-cols-4 gap-8">
+				<!-- Main Article -->
+				<article class="lg:col-span-3">
+					<!-- Header -->
+					<header class="mb-12">
+						<div class="mb-4">
+							<a href="/blog" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">
+								← Back to all posts
+							</a>
+						</div>
+						<div class="flex flex-wrap items-center gap-3 mb-4">
+							<time class="text-sm text-slate-400 font-medium">
+								<FormattedDate date={pubDate} />
+							</time>
+							{
+								Astro.slots.has('reading-time') && (
+									<slot name="reading-time" />
+								)
+							}
+						</div>
+						<h1 class="text-3xl md:text-4xl font-bold text-slate-200 mb-6 leading-tight">
+							{title}
+						</h1>
+						{description && (
+							<p class="text-xl text-slate-400 leading-relaxed mb-4">
+								{description}
+							</p>
+						)}
+						{tags && tags.length > 0 && (
+							<div class="mt-4">
+								<TagList tags={tags} />
+							</div>
+						)}
+						{updatedDate && (
+							<p class="text-sm text-slate-500 mt-4 italic">
+								Last updated on <FormattedDate date={updatedDate} />
+							</p>
+						)}
+					</header>
 
 				<!-- Hero Image -->
 				{heroImage && (
@@ -107,9 +125,17 @@ const pageUrl = Astro.url.href;
 				<!-- Keyboard Navigation -->
 				<KeyboardNav />
 
-				<!-- Copy Code Buttons -->
-				<CopyCodeButton />
-			</article>
+					<!-- Copy Code Buttons -->
+					<CopyCodeButton />
+				</article>
+
+				<!-- Table of Contents Sidebar -->
+				{headings && headings.length > 0 && (
+					<div class="lg:col-span-1">
+						<TableOfContents headings={headings} />
+					</div>
+				)}
+			</div>
 		</main>
 		<Footer />
 	</body>
