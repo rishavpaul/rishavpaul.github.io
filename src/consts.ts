@@ -16,7 +16,7 @@ export const SOCIAL_LINKS = {
 
 // Professional info for structured data
 export const PROFESSIONAL_INFO = {
-	jobTitle: 'Technical Lead II',
+	jobTitle: 'Technical Lead',
 	currentCompany: 'HubSpot',
 	keywords: [
 		'Backend Engineering',
